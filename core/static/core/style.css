@@ -1,0 +1,84 @@
+/* CSS for Noah Geller's personal site. Written by him, obviously. */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "EB Garamond", serif;
+    font-size: 14pt;
+    color: black;
+}
+
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50pt;
+    font-family: "Lobster", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+}
+header h1 a:link {
+    color: black;
+}
+header h1 a:visited {
+    color: black;
+}
+header h1 a:active {
+    color: black;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+nav li a:hover {
+    background: #d4d4d4;
+}
+nav li a:link {
+    color: black;
+}
+nav li a:visited {
+    color: black;
+}
+nav li a:active {
+    color: black;
+}
+nav li a.current {
+    background: #d1d1d1;
+}
+
+
+#bodycontent {
+    margin: 10px auto;
+    width: 66%;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 8pt;
+}
