@@ -1,84 +1,92 @@
 /* CSS for Noah Geller's personal site. Written by him, obviously. */
 
+:root {
+    font-size: 18px;
+    font-family: "EB Garamond", serif;
+    --text-primary: #ffffff;
+    --bg-primary: #ededed;
+    --bg-secondary: #d1d1d1;
+}
+
 body {
     padding: 0;
     margin: 0;
-    font-family: "EB Garamond", serif;
-    font-size: 14pt;
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+a:link, a:visited, a:active {
     color: black;
 }
 
-
-header {
+#header {
     text-align: center;
-}
-
-header h1 {
-    font-size: 50pt;
-    font-family: "Lobster", cursive;
-    margin: 0;
+    top: 0;
+    margin: 0 auto;
     padding: 0;
+    width: 100vw;
+    background: #ffffff;
+    position: fixed;
 }
 
-header h1 a {
+#branding {
+    font-size: 4rem;
+    font-family: "Lobster", cursive;
+    margin: 0 auto 0.25rem;
+    padding: 0;
+    transition: 0.2s;
+}
+
+#branding a {
     text-decoration: none;
 }
-header h1 a:link {
-    color: black;
-}
-header h1 a:visited {
-    color: black;
-}
-header h1 a:active {
-    color: black;
+
+#navbar {
+    width: 100vw;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--bg-secondary);
+    border-bottom: 1px solid var(--bg-secondary);
 }
 
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
+#nav-list {
+    list-style: none;
     padding: 0;
-    background-color: #ededed;
+    margin: 0 auto;
+    width: 20rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    top: 0;
 }
 
-nav li {
-    float: left;
+.nav-item {
+    width: 100%;
 }
 
-nav li a {
+.nav-item:hover {
+    background-color: var(--bg-secondary);
+}
+
+.nav-link {
     display: block;
-    padding: 10px 16px;
     text-decoration: none;
-}
-nav li a:hover {
-    background: #d4d4d4;
-}
-nav li a:link {
-    color: black;
-}
-nav li a:visited {
-    color: black;
-}
-nav li a:active {
-    color: black;
-}
-nav li a.current {
-    background: #d1d1d1;
+    padding: 0.7rem 0;
 }
 
-
-#bodycontent {
-    margin: 10px auto;
+main {
     width: 66%;
+    margin: 9rem auto 0;
 }
-
 
 footer {
     text-align: center;
-    font-size: 8pt;
+    font-size: 0.8rem;
 }

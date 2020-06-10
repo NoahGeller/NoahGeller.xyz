@@ -1,5 +1,30 @@
 {% extends 'core/base.html' %}
+{% load static %}
+
 {% block title %}Blog{% endblock %}
-{% block bodycontent %}
-<p>Here's the blog!</p>
+{% block header_ext %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/index.css' %}" />
+{% endblock %}
+
+{% block main %}
+    <h1>Welcome to my blog.</h1>
+{% if posts %}
+    {% for post in posts %}
+    <div class="post">
+        <h2 class="posttitle">{{ post.title }}</h2>
+        <p class="timestamp">{{ post.creation_date }}</p>
+        <p class="category">Category: {{ post.category }}</p>
+        <div class="postcontent">
+            {{ post.preview }}
+        </div>
+        <p class="detail-link"><a href="{% url 'blog:detail' post.slug %}">Read more</a></p>
+    </div>
+    {% endfor %}
+{% else %}
+    <div id="no-posts-msg">
+        No posts available.
+    </div>
+{% endif %}
+
 {% endblock %}

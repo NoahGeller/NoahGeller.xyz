@@ -7,24 +7,36 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="{% static 'core/style.css' %}" />
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lobster&display=swap" rel="stylesheet" />
+    <script src="{% static 'core/script.js' %}"></script>
+    {% block header_ext %}{% endblock %}
 </head>
 <body>
-    <header>
-        <h1><a href="{% url 'core:index' %}">Noah Geller</a></h1>
-        <nav>
-            <ul>
-                <li><a href="{% url 'core:index' %}">Home</a></li>
-                <li><a href="{% url 'core:about' %}">About</a></li>
-                <li><a href="{% url 'portfolio:index' %}">Portfolio</a></li>
-                <li><a href="{% url 'blog:index' %}">Blog</a></li>
+    <header id="header">
+        <div id="branding">
+            <a href="{% url 'core:index' %}">Noah Geller</a>
+        </div>
+        <nav id="navbar">
+            <ul id="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'portfolio:index' %}">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
+                </li>
             </ul>
         </nav>
     </header>
-    <div id="bodycontent">
-        {% block bodycontent %}{% endblock %}
-    </div>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
     <footer>
-        <p>Copyright &copy; Noah Geller 2020. All rights reserved.</p>
+        <p>Copyright &copy; Noah Geller {% now 'Y' %}. All rights reserved.</p>
     </footer>
 </body>
 

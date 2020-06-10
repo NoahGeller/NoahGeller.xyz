@@ -1,0 +1,17 @@
+{% extends 'core/index.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block header_ext %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}" />
+{% endblock %}
+{% block main %}
+    <div class="post">
+        <h2 class="posttitle">{{ post.title }}</h2>
+        <p class="timestamp">{{ post.creation_date }}</p>
+        <p class="category">Category: {{ post.category }}</p>
+        <div class="postcontent">
+            {{ post.content|linebreaks }}
+        </div>
+    </div>
+{% endblock %}
