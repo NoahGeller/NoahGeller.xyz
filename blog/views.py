@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Category, Post
 
@@ -10,10 +10,7 @@ def index(request):
     return render(request, 'blog/index.html', context)
 
 def detail(request, slug):
-    try:
-        post = Post.objects.get(slug=slug)
-    except Post.DoesNotExist:
-        raise Http404('Post does not exist!')
+    post = get_object_or_404(Post, slug=slug)
     context = {
         'post': post,
     }

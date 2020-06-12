@@ -6,4 +6,5 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('portfolio/', include('portfolio.urls')),
     path('admin/', admin.site.urls),
+    path('tinymce/', include('tinymce.urls')),
 ]

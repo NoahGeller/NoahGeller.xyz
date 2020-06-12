@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Category(models.Model):
@@ -11,7 +12,7 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=64, unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    content = models.TextField()
+    content = HTMLField()
     creation_date = models.DateTimeField()
     slug = models.SlugField(max_length=32, unique=True)
 
