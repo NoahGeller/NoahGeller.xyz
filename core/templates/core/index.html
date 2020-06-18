@@ -1,5 +1,8 @@
 {% extends 'core/base.html' %}
 {% block title %}Noah Geller{% endblock %}
 {% block main %}
-    <p>Hello, world.</p>
+    <h1>Welcome! Thanks for stopping by.</h1>
+    <p>I'm Noah, and you just found my website. Congratulations.</p>
+    <p>As a student, I spend a lot of my time learning and creating. I wanted to build a place where I could learn and create in front of an audience. This is that place.</p>
+    <p>If you want to learn more about me, try my conveniently-named <a href="{% url 'core:about' %}">About</a> page. If you're curious about the things I've done, head over to my <a href="{% url 'portfolio:index' %}">Portfolio</a>. If you want to read more dryly sarcastic writing about another person's life, check out my <a href="{% url 'blog:index' %}">Blog</a>. And, of course, to come back here, go <a href="{% url 'core:index' %}">Home</a>.</p>
 {% endblock %}

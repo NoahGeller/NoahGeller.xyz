@@ -1,5 +1,29 @@
 {% extends 'core/base.html' %}
+{% load static %}
 {% block title %}About{% endblock %}
+{% block header_ext %}
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/about.css' %}">
+{% endblock %}
 {% block main %}
-    <p>Here is some stuff about me.</p>
+    <h1>Facts about me</h1>
+    <p>I'm a student at <a href="https://www.stanford.edu">Stanford University</a> pursuing a B.S. in Mathematics.</p>
+    <p>I'm minoring in <a href="https://cs.stanford.edu">Computer Science</a> and intend to pursue a coterminal Masters in CS upon graduation.</p>
+    <p>I sing in <a href="https://www.mixedco.com">Mixed Company</a>, Stanford's oldest all-gender a cappella group. I'm a tenor.</p>
+    <p>I'm a co-president of the <a href="https://orion.stanford.edu">Stanford Astronomical Society</a>. I love space.</p>
+    <p>I believe that <a href="https://www.rust-lang.org">Rust</a> is the future, but C is still pretty cool.</p>
+    <p>I've been self-teaching the ukulele for a couple years because it's a really easy instrument.</p>
+    <p>I love musical theatre and I listen to too many showtunes for 20 year-old. <em>Rent</em> is my favorite.</p>
+    <p>I love reinventing the wheel to a fault, and I hate <a href="https://www.getbootstrap.com">Bootstrap</a> with a burning passion.</p>
+    <p>I'm <a href="https://en.wikipedia.org/wiki/Judaism">Jewish</a>.</p>
+    <p>I strongly prefer French-pressed coffee to drip coffee, and I like to grind my own beans with a tedious hand grinder.</p>
+    <p>I'm addicted to <a href="https://archlinux.org">Arch Linux</a> and am constantly customizing my build.</p>
+    <p>I'm also a big fan of <a href="https://suckless.org">suckless</a> software, except how much they use tabs instead of spaces.</p>
+    <p>Spaces, but using the tab key to insert a fixed amount with a vim binding.</p>
+    <p>Vim, but <a href="https://neovim.io">neovim</a> with a lot of plugins.</p>
+    <p>I hold the groundbreaking opinion that <a href="https://www.blacklivesmatter.com">Black Lives Matter</a>.</p>
+    <p>I'm an ex-physics major who still loves the subject. I idolize Richard Feynman and his <a href="https://feynmanlectures.caltech.edu">lectures</a>.</p>
+    <p>I'm from Southern California, but I've broken out of my shell and spend a lot of time in far-off Northern California.</p>
+    <p>I'm committed to writing as many of my notes and documents as I can in LaTeX, but it's really hard because LaTeX is terrible.</p>
+    <p>My favorite video game is <a href="https://bindingofisaac.com">The Binding of Isaac</a>, even though I'll probably never be good at it.</p>
+    <p>I'm a pescetarian for reasons too complicated to explain.</p>
 {% endblock %}

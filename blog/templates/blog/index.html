@@ -14,16 +14,16 @@
     <div class="post">
         <h2 class="posttitle">{{ post.title }}</h2>
         <p class="timestamp">{{ post.creation_date }}</p>
-        <p class="category">Category: {{ post.category }}</p>
+        <p class="tags">Tags: {{ post.tag_list }}</p>
         <div class="postcontent">
-            {{ post.preview }}
+            {{ post.preview|safe }}
+            <a class="detail-link" href="{% url 'blog:detail' post.slug %}">Read more</a>
         </div>
-        <p class="detail-link"><a href="{% url 'blog:detail' post.slug %}">Read more</a></p>
     </div>
     {% endfor %}
 {% else %}
     <div id="no-posts-msg">
-        No posts available.
+        <p>No posts available.</p>
     </div>
 {% endif %}
 
