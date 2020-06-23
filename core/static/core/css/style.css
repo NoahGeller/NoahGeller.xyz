@@ -76,6 +76,7 @@ a:link, a:visited, a:active {
 
 .nav-item {
     width: 100%;
+    transition: 0.3s;
 }
 
 .nav-item:hover {
