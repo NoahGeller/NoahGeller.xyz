@@ -2,16 +2,16 @@ from django.db import models
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=32, unique=True)
+    name = models.CharField(max_length=32, unique=True, default='')
 
     def __str__(self):
         return self.name
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=64)
+    title = models.CharField(max_length=64, default='Untitled')
     tags = models.ManyToManyField(Tag)
-    content = models.TextField()
+    content = models.TextField(default='')
     creation_date = models.DateTimeField()
     slug = models.SlugField(max_length=32, unique=True)
 

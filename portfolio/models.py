@@ -1,10 +1,10 @@
 from django.db import models
 
 class Project(models.Model):
-    name = models.CharField(max_length=32)
-    description = models.TextField()
-    image = models.ImageField()
-    slug = models.CharField(max_length=32, unique=True)
+    name = models.CharField(max_length=32, default='')
+    description = models.TextField(default='')
+    image = models.ImageField(default='')
+    slug = models.CharField(max_length=32, unique=True, default='')
 
     def __str__(self):
         return self.name
