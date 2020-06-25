@@ -28,6 +28,6 @@ class Post(models.Model):
             return ' '.join(str(self.content).split(' ')[:50])
         words = str(self.content).split('<p>')[1].split('</p>')[0]
         preview = ' '.join(words.split(' ')[:50])
-        if len(words) > 50:
+        if len(words.split(' ')) > 50:
             preview += '.....'
         return preview

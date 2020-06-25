@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}{{ project.name }}{% endblock %}
+{% block header_ext %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/detail.css' %}">
+{% endblock %}
+{% block main %}
+    <div class="project">
+        <h1 class="project-name">{{ project.name }}</h1>
+        <div class="project-image-container">
+            <img class="project-image" src="{{ project.image.url }}">
+        </div>
+        <div class="project-description">
+            {{ project.description|safe }}
+        </div>
+    </div>
+{% endblock %}

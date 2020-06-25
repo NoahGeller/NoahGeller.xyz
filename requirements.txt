@@ -4,5 +4,6 @@ django-summernote==0.8.11.6
 greenlet==0.4.16
 gunicorn==20.0.4
 msgpack==1.0.0
+Pillow==7.1.2
 pytz==2020.1
 sqlparse==0.3.1
