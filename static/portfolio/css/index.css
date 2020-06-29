@@ -1,0 +1,52 @@
+#projects-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-link {
+    text-decoration: none;
+}
+
+.project {
+    width: 15rem;
+    height: 15rem;
+    padding: 2rem;
+    margin: 0.5rem;
+    background-color: var(--bg-primary);
+    border-radius: 4rem;
+    transition: 0.5s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.project:hover {
+    background-color: var(--bg-secondary);
+}
+
+.project-name {
+    margin: -0.5rem 0 0.5rem;
+    padding: 0;
+}
+
+.project-image-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.project-image {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.project-description {
+    margin: 0.5rem 0 0;
+    padding: 0;
+}

@@ -1,0 +1,24 @@
+.post {
+    padding: 1.5rem 1.5rem;
+    margin: 0 0 1rem;
+    background-color: var(--bg-primary);
+    border-radius: 2rem;
+    transition: 0.5s;
+}
+
+.post:hover {
+    background-color: var(--bg-secondary);
+}
+
+a.detail-link {
+    display: block;
+    text-decoration: none;
+}
+
+.post:last-of-type {
+    border-bottom: none;
+}
+
+#no-posts-msg {
+    font-style: italic;
+}

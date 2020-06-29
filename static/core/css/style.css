@@ -1,0 +1,116 @@
+/* CSS for Noah Geller's personal site. Written by him, obviously. */
+
+:root {
+    font-size: 18px;
+    font-family: "EB Garamond", serif;
+    --text-primary: #ffffff;
+    --bg-primary: #ededed;
+    --bg-secondary: #d1d1d1;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a:link, a:visited, a:active {
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#header {
+    text-align: center;
+    top: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100vw;
+    background: #ffffff;
+    position: fixed;
+    z-index: 1;
+}
+
+#branding {
+    font-size: 4rem;
+    font-family: "Lobster", cursive;
+    margin: 0 auto 0.25rem;
+    padding: 0;
+    transition: 0.2s;
+}
+
+#branding a {
+    text-decoration: none;
+}
+
+#navbar {
+    width: 100vw;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--bg-secondary);
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+#nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background-color: var(--bg-secondary);
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    padding: 0.7rem 0;
+}
+
+main {
+    width: 66%;
+    margin: 9rem auto 0;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        width: 90%;
+    }
+}
+
+footer {
+    text-align: center;
+    margin: 3rem auto 0;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
