@@ -12,7 +12,7 @@ class Post(models.Model):
     title = models.CharField(max_length=64, default='Untitled')
     tags = models.ManyToManyField(Tag)
     content = models.TextField(default='')
-    creation_date = models.DateTimeField()
+    pub_date = models.DateTimeField()
     slug = models.SlugField(max_length=32, unique=True)
     description = models.CharField(max_length=256, default='')
 

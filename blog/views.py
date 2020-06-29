@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Tag, Post
 
 def index(request):
-    posts = Post.objects.order_by('-creation_date')
+    posts = Post.objects.order_by('-pub_date')
     context = {
         'posts': posts,
     }

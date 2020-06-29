@@ -36,7 +36,7 @@ def sitemap(request):
     ]
     return HttpResponse('\n'.join(lines), content_type='text/xml')
 
-def error_404(request):
+def error_404(request, exception):
     return render(request, 'core/error_404.html')
 
 def error_500(request):
