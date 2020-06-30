@@ -12,16 +12,18 @@
     <p>I like to post random pieces on here. There's no theme or anything like that&mdash;if I write something that I'm proud of or need to share, it might end up here. It's also a custom Django app, and you can find the source at this website's <a href="https://github.com/NoahGeller/personal_site">GitHub respository</a> if you're curious.</p>
 {% if posts %}
     {% for post in posts %}
-    <a class="detail-link" href="{% url 'blog:detail' post.slug %}">
-        <div class="post">
-            <h2 class="posttitle">{{ post.title }}</h2>
-            <p class="timestamp">{{ post.creation_date }}</p>
-            <p class="tags">Tags: {{ post.tag_list }}</p>
-            <div class="postcontent">
-                <p>{{ post.preview|safe }}</p>
-            </div>
-        </div>
-    </a>
+        {% if post.hidden == False %}
+            <a class="detail-link" href="{% url 'blog:detail' post.slug %}">
+                <div class="post">
+                    <h2 class="posttitle">{{ post.title }}</h2>
+                    <p class="timestamp">{{ post.creation_date }}</p>
+                    <p class="tags">Tags: {{ post.tag_list }}</p>
+                    <div class="postcontent">
+                        <p>{{ post.preview|safe }}</p>
+                    </div>
+                </div>
+            </a>
+        {% endif %}
     {% endfor %}
 {% else %}
     <div id="no-posts-msg">

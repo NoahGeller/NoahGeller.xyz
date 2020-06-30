@@ -15,6 +15,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField()
     slug = models.SlugField(max_length=32, unique=True)
     description = models.CharField(max_length=256, default='')
+    hidden = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

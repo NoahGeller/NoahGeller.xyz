@@ -1,6 +1,5 @@
 {% extends 'core/index.html' %}
 {% load static %}
-
 {% block title %}{{ post.title }} | Noah Geller's Blog{% endblock %}
 {% block header_ext %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}" />
@@ -8,12 +7,17 @@
     <meta name="description" content="{{ post.description }}">
 {% endblock %}
 {% block main %}
-    <div class="post">
-        <h2 class="posttitle">{{ post.title }}</h2>
-        <p class="timestamp">{{ post.creation_date }}</p>
-        <p class="tags">Tags: {{ post.tag_list }}</p>
-        <div class="postcontent">
-            {{ post.content|safe}}
+    {% if post.hidden == False %}
+        <div class="post">
+            <h1 class="posttitle">{{ post.title }}</h1>
+            <p class="timestamp">{{ post.creation_date }}</p>
+            <p class="tags">Tags: {{ post.tag_list }}</p>
+            <div class="postcontent">
+                {{ post.content|safe}}
+            </div>
         </div>
-    </div>
+    {% else %}
+        <h1>Wow. Look at you.</h1>
+        <p>You found a hidden post. Too bad it's impossible to view.</p>
+    {% endif %}
 {% endblock %}
