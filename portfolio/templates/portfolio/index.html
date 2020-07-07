@@ -5,9 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/index.css' %}">
 {% endblock %}
 {% block main %}
-    <h2>Here's some stuff I've made.</h2>
+    <h2 class="heading">Here's some stuff I've made.</h2>
     {% if projects %}
-        <div id="projects-container">
+        <div class="projects-container">
             {% for project in projects %}
                 <a class="detail-link" href="{% url 'portfolio:detail' project.slug %}">
                     <div class="project">
