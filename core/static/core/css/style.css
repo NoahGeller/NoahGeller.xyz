@@ -1,7 +1,7 @@
 /* CSS for Noah Geller's personal site. Written by him, obviously. */
 
 :root {
-    font-size: 18px;
+    font-size: 20px;
     font-family: "EB Garamond", serif;
     --text-primary: #ffffff;
     --bg-primary: #ededed;
@@ -95,7 +95,7 @@ img {
 }
 
 main {
-    width: 50%;
+    width: 70%;
     margin: 9rem auto 0;
     overflow: auto;
 }
