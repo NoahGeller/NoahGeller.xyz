@@ -10,7 +10,7 @@
     {% if post.hidden == False %}
         <div class="post">
             <h1 class="posttitle">{{ post.title }}</h1>
-            <p class="timestamp">{{ post.creation_date }}</p>
+            <p class="timestamp">{{ post.pub_date }}</p>
             <p class="tags">Tags: {{ post.tag_list }}</p>
             <div class="postcontent">
                 {{ post.content|safe}}

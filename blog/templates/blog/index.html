@@ -16,7 +16,7 @@
             <a class="detail-link" href="{% url 'blog:detail' post.slug %}">
                 <div class="post">
                     <h2 class="posttitle">{{ post.title }}</h2>
-                    <p class="timestamp">{{ post.creation_date }}</p>
+                    <p class="timestamp">{{ post.pub_date }}</p>
                     <p class="tags">Tags: {{ post.tag_list }}</p>
                     <div class="postcontent">
                         <p>{{ post.preview|safe }}</p>
